@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.solon.app.domain.ChildDomain;
 import org.solon.app.entity.ChildEntity;
 
-@Mapper(componentModel = "spring", uses = ParentMapper.class)
+@Mapper(componentModel = "spring")
 public interface ChildMapper {
 
     ChildDomain from(ChildEntity entity);
