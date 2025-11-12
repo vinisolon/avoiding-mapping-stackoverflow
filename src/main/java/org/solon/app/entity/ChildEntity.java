@@ -10,6 +10,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -23,6 +24,6 @@ public class ChildEntity {
     @Column(name = "CHILD_VALUE")
     private String childValue;
     @OneToMany(mappedBy = "child", fetch = FetchType.LAZY)
-    private List<ParentEntity> parents;
+    private List<ParentEntity> parents = new ArrayList<>();
 
 }
